@@ -43,6 +43,8 @@ def create_currency():
     # EquityThree.objects.filter(time__lte = segpastDate).delete()
     # EquityThree.objects.filter(date__lt = nsepadDate).delete()
     #  -----
+    LiveEquityResult.objects.filter(time__lte = '09:18:00').delete()
+    
 
     # gain & loss list -----
     # fnolist = ['ESCORTS','ATUL']
