@@ -26,16 +26,16 @@ def create_currency():
 
     from datetime import datetime, time
     # ----- old data deletion ----
-    # pastDate = datetime.combine(datetime.now(timezone('Asia/Kolkata')), time(9,16)).time()
-    # nsepadDate = datetime.combine(datetime.now(timezone('Asia/Kolkata')), time(9,16)).date()
-    # LiveSegment.objects.filter(time__lte = pastDate).delete()
-    # LiveSegment.objects.filter(date__lt = nsepadDate).delete()
-    # pastDate = datetime.combine(datetime.now(timezone('Asia/Kolkata')), time(9,16))
-    # segpastDate = datetime.combine(datetime.now(timezone('Asia/Kolkata')), time(9,16)).time()
+    pastDate = datetime.combine(datetime.now(timezone('Asia/Kolkata')), time(9,16)).time()
+    nsepadDate = datetime.combine(datetime.now(timezone('Asia/Kolkata')), time(9,16)).date()
+    LiveSegment.objects.filter(time__lte = pastDate).delete()
+    LiveSegment.objects.filter(date__lt = nsepadDate).delete()
+    pastDate = datetime.combine(datetime.now(timezone('Asia/Kolkata')), time(9,16))
+    segpastDate = datetime.combine(datetime.now(timezone('Asia/Kolkata')), time(9,16)).time()
 
     # #LiveEquityResult.objects.all().delete()
-    # TestEquityResult.objects.filter(date__lte = pastDate).delete()
-    # LiveEquityResult.objects.filter(date__lte = pastDate).delete()
+    TestEquityResult.objects.filter(date__lte = pastDate).delete()
+    LiveEquityResult.objects.filter(date__lte = pastDate).delete()
     # LiveSegment.objects.filter(time__lte = segpastDate).delete()
     # LiveSegment.objects.filter(date__lt = nsepadDate).delete()
     # SuperLiveSegment.objects.filter(time__lte = segpastDate).delete()
