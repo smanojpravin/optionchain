@@ -71,6 +71,7 @@ def create_currency():
     # --------
     # fnolist = ['ESCORTS']
     # fnolist = ['GODREJPROP']
+    fnolist.remove('AMARAJABAT')
 
 
     def OIPercentChange(df):
